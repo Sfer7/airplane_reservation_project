@@ -1,6 +1,6 @@
-package com.project.airplane_reservation.repository;
+package com.project.airplane_reservation.member.repository;
 
-import com.project.airplane_reservation.domain.Member;
+import com.project.airplane_reservation.member.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.project.airplane_reservation.domain;
+package com.project.airplane_reservation.member.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -14,20 +14,23 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Company {
+public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     @NotNull
-    @Column(length = 20)
-    private String companyName;
+    @Column(length = 15)
+    private String userId;
     @NotNull
-    private String companyNum;
+    @Column(length = 10)
+    private String name;
     @NotNull
     @Column(length = 15)
     private String phoneNum;
-    private String webPage;
+    private String email;
     private LocalDate regDate;
-    private long totalRegItems;
-    private long totalSales;
+    @NotNull
+    private String state;
+    private long mileage;
 }

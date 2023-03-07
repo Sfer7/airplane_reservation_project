@@ -1,10 +1,9 @@
-package com.project.airplane_reservation.service;
+package com.project.airplane_reservation.member.service;
 
-import com.project.airplane_reservation.domain.Member;
-import com.project.airplane_reservation.repository.MemberRepository;
+import com.project.airplane_reservation.member.domain.Member;
+import com.project.airplane_reservation.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Optional;
 
