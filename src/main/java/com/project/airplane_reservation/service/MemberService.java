@@ -13,7 +13,7 @@ import java.util.Optional;
 public class MemberService {
     private final MemberRepository memberRepository;
     public boolean register(String userId, String email) {
-        Optional<Member> optionalMember= memberRepository.findByUserIdOrEmail(userId, email);
+        Optional<Member> optionalMember= memberRepository.findAllByUserIdOrEmail(userId, email);
         if(optionalMember.isPresent()) {
             if(userId.equals(optionalMember.get().getUserId()))
                 System.out.println("이미 사용중인 아이디입니다.");

@@ -30,5 +30,7 @@ public class Member {
     private String phoneNum;
     private String email;
     private LocalDate regDate;
+    @NotNull
+    private String state;
     private long mileage;
 }
