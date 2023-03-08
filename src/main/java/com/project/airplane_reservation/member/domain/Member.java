@@ -2,19 +2,18 @@ package com.project.airplane_reservation.member.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
+import java.util.regex.Pattern;
 
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Member {
+public class Member implements MemberState {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -26,6 +25,8 @@ public class Member {
     @Column(length = 10)
     private String name;
     @NotNull
+    private String password;
+    @NotNull
     @Column(length = 15)
     private String phoneNum;
     private String email;
@@ -33,4 +34,5 @@ public class Member {
     @NotNull
     private String state;
     private long mileage;
+    private String emailAuthKey;
 }

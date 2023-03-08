@@ -24,6 +24,8 @@ public class Company {
     @NotNull
     private String companyNum;
     @NotNull
+    private String password;
+    @NotNull
     @Column(length = 15)
     private String phoneNum;
     private String webPage;
