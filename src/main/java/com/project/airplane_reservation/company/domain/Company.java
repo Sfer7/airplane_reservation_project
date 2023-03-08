@@ -2,19 +2,17 @@ package com.project.airplane_reservation.company.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
+@Builder
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Company {
+public class Company implements CompanyState{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -29,7 +27,11 @@ public class Company {
     @Column(length = 15)
     private String phoneNum;
     private String webPage;
+    @NotNull
+    private String address;
     private LocalDate regDate;
     private long totalRegItems;
     private long totalSales;
+    @NotNull
+    private String state;
 }
